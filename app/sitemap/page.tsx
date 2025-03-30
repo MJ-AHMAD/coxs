@@ -32,7 +32,7 @@ export default function Sitemap() {
         { name: "Education Hub", href: "/education-hub", icon: GraduationCap },
         { name: "Economic Hub", href: "/economic-hub", icon: Building },
         { name: "Climate Hub", href: "/climate-hub", icon: Cloud },
-        { name: "Social Initiatives", href: "/social-initiatives", icon: Heart },
+        { name: "Social Initiatives", href: "https://ecmv.vercel.app/social-initiatives", icon: Heart },
       ],
     },
     {
