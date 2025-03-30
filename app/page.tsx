@@ -41,7 +41,7 @@ export default function Home() {
     },
     { name: "Economic Hub", icon: Building, href: "/economic-hub", description: "Economic activities and development" },
     { name: "Climate Hub", icon: Cloud, href: "/climate-hub", description: "Climate information and initiatives" },
-    { name: "Social Initiatives", icon: Heart, href: "/social-initiatives", description: "Community welfare programs" },
+    { name: "Social Initiatives", icon: Heart, href: "https://ecmv.vercel.app/social-initiatives", description: "Community welfare programs" },
     { name: "Health Hub", icon: Stethoscope, href: "/health-hub", description: "Healthcare facilities and services" },
     {
       name: "Marine Resource Hub",
