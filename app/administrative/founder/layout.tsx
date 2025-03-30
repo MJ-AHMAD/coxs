@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-import { Footer } from "@/components/footer"
 import { useEffect, useState } from "react"
 
 export default function FounderLayout({
@@ -35,5 +34,11 @@ export default function FounderLayout({
     return null
   }
 
+  return (
+    <div className="min-h-screen flex flex-col">
+      {/* Navbar completely removed for all devices */}
+      <main className="flex-grow">{children}</main>
+      {/* Footer component removed to prevent duplicate footers */}
+    </div>
+  )
 }
-
