@@ -30,7 +30,7 @@ export default function Home() {
     {
       name: "Tourist Hub",
       icon: Compass,
-      href: "/tourist-hub",
+      href: "https://coxstr.vercel.app/",
       description: "Explore the beautiful beaches and attractions",
     },
     {
