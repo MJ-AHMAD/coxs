@@ -36,7 +36,7 @@ export default function Home() {
     {
       name: "Education Hub",
       icon: GraduationCap,
-      href: "/education-hub",
+      href: "https://tac-plum.vercel.app/education-program",
       description: "Educational institutions and initiatives",
     },
     { name: "Economic Hub", icon: Building, href: "/economic-hub", description: "Economic activities and development" },
@@ -55,18 +55,18 @@ export default function Home() {
       href: "/infrastructure-hub",
       description: "Infrastructure development projects",
     },
-    { name: "Research Hub", icon: BookOpen, href: "/research-hub", description: "Research activities and findings" },
+    { name: "Research Hub", icon: BookOpen, href: "https://tac-plum.vercel.app/", description: "Research activities and findings" },
     {
       name: "Water Resources Hub",
       icon: Droplet,
       href: "/water-resources-hub",
       description: "Water management and conservation",
     },
-    { name: "Community Hub", icon: Users, href: "/community-hub", description: "Community engagement and activities" },
+    { name: "Community Hub", icon: Users, href: "https://tac-plum.vercel.app/", description: "Community engagement and activities" },
     {
       name: "Sustainable Development Hub",
       icon: Leaf,
-      href: "/sustainable-development-hub",
+      href: "https://tac-plum.vercel.app/environmental-development",
       description: "Sustainable development initiatives",
     },
   ]
