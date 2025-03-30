@@ -35,12 +35,5 @@ export default function FounderLayout({
     return null
   }
 
-  return (
-    <div className="min-h-screen flex flex-col">
-      {/* Navbar completely removed for all devices */}
-      <main className="flex-grow">{children}</main>
-      <Footer />
-    </div>
-  )
 }
 
