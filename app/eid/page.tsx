@@ -1369,9 +1369,6 @@ export default function EidSpecial() {
 
           <div className="border-t border-gray-800 pt-8 mt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="text-gray-500 text-sm">
-                <p>© {new Date().getFullYear()} Cox's Bazar Eid Special. All rights reserved.</p>
-              </div>
               <div className="text-gray-500 text-sm md:text-right">
                 <p className="mb-4">
                   We value your privacy and are committed to protecting your personal information. All data collected is
