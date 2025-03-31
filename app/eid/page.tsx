@@ -980,7 +980,7 @@ export default function EidSpecial() {
             <div className="relative rounded-2xl overflow-hidden group">
               <div className="absolute inset-0">
                 <Image
-                  src="https://mj-ahmad.github.io/mja2025/img/night00.png"
+                  src="https://mj-ahmad.github.io/mja2025/img/coxsnight.png"
                   alt="Beach Night Party"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -1024,7 +1024,7 @@ export default function EidSpecial() {
             <div className="relative rounded-2xl overflow-hidden group">
               <div className="absolute inset-0">
                 <Image
-                  src="https://mj-ahmad.github.io/mja2025/img/spa00.png"
+                  src="https://mj-ahmad.github.io/mja2025/img/coxs1022.png"
                   alt="Spa and Wellness"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -1070,7 +1070,7 @@ export default function EidSpecial() {
             <Card className="overflow-hidden hover:shadow-lg transition-all group">
               <div className="relative h-48">
                 <Image
-                  src="https://mj-ahmad.github.io/mja2025/img/photo00.png"
+                  src="https://mj-ahmad.github.io/mja2025/img/coxs1011.png"
                   alt="Professional Photoshoot"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -1102,7 +1102,7 @@ export default function EidSpecial() {
             <Card className="overflow-hidden hover:shadow-lg transition-all group">
               <div className="relative h-48">
                 <Image
-                  src="https://mj-ahmad.github.io/mja2025/img/adventure00.png"
+                  src="https://mj-ahmad.github.io/mja2025/img/cox1.png"
                   alt="Adventure Activities"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -1133,7 +1133,7 @@ export default function EidSpecial() {
             <Card className="overflow-hidden hover:shadow-lg transition-all group">
               <div className="relative h-48">
                 <Image
-                  src="https://mj-ahmad.github.io/mja2025/img/cruise00.png"
+                  src="https://mj-ahmad.github.io/mja2025/img/coxs1.png"
                   alt="Luxury Cruise"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -1335,42 +1335,6 @@ export default function EidSpecial() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Packages
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Activities
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Hotels
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Transportation
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
               <h3 className="text-lg font-semibold mb-4">Legal</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>
@@ -1401,46 +1365,13 @@ export default function EidSpecial() {
               </ul>
             </div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contact</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-primary mt-0.5" />
-                  <span>Cox's Bazar Main Beach Road, Cox's Bazar, Bangladesh</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-primary" />
-                  <span>+880 1234 567890</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-primary" />
-                  <span>info@coxsbazareid.com</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
           <div className="border-t border-gray-800 pt-8 mt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="text-gray-500 text-sm">
-                <p>© {new Date().getFullYear()} Cox's Bazar Eid Special. All rights reserved.</p>
-              </div>
               <div className="text-gray-500 text-sm md:text-right">
                 <p className="mb-4">
                   We value your privacy and are committed to protecting your personal information. All data collected is
                   securely stored and will never be shared with third parties without your explicit consent.
                 </p>
-                <div className="flex flex-wrap gap-4 md:justify-end">
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Cookie Settings
-                  </Link>
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Accessibility
-                  </Link>
-                  <Link href="#" className="hover:text-primary transition-colors">
-                    Sitemap
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
