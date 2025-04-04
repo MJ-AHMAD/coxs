@@ -10,12 +10,12 @@ interface ActedJobApplicationProps {
 }
 
 export const ActedJobApplication: React.FC<ActedJobApplicationProps> = ({
-  applicantName = "Your Name",
-  applicantEmail = "your.email@example.com",
-  applicantPhone = "+880 1XXX XXXXXX",
-  portfolioLink = "https://yourportfolio.com",
-  linkedInProfile = "https://linkedin.com/in/yourprofile",
-  githubProfile = "https://github.com/yourusername",
+  applicantName = "Md Jafor Ahmad",
+  applicantEmail = "mjahmad2024@outlook.com",
+  applicantPhone = "+880 1336 221217",
+  websitelioLink = "https://tallybd.vercel.app",
+  linkedInProfile = "https://linkedin.com/in/jafor-ahmad",
+  githubProfile = "https://github.com/MJ-AHMAD",
 }) => {
   const currentDate = new Date().toLocaleDateString("en-US", {
     year: "numeric",
