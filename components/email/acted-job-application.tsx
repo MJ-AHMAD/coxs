@@ -13,7 +13,7 @@ export const ActedJobApplication: React.FC<ActedJobApplicationProps> = ({
   applicantName = "Md Jafor Ahmad",
   applicantEmail = "mjahmad2024@outlook.com",
   applicantPhone = "+880 1336 221217",
-  websitelioLink = "https://tallybd.vercel.app",
+  websitelioLink = "https://tallybd.vercel.app/",
   linkedInProfile = "https://linkedin.com/in/jafor-ahmad",
   githubProfile = "https://github.com/MJ-AHMAD",
 }) => {
@@ -145,8 +145,8 @@ export const ActedJobApplication: React.FC<ActedJobApplicationProps> = ({
           <p className="font-medium mb-2">Connect with me:</p>
           <div className="flex space-x-4">
             {portfolioLink && (
-              <a href={portfolioLink} className="text-blue-600 hover:underline">
-                Portfolio
+              <a href={websiteLink} className="text-blue-600 hover:underline">
+                Website
               </a>
             )}
             {linkedInProfile && (
