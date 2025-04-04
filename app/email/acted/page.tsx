@@ -9,7 +9,7 @@ export default function ActedApplicationPage() {
           applicantName="Md Jafor Ahmad"
           applicantEmail="mjahmad2024@outlook.com"
           applicantPhone="+880 1336 221217"
-          websiteLink="https://coxs.vercel.app/"
+          websiteLink="https://tallybd.vercel.app/"
           linkedInProfile="https://linkedin.com/in/jafor-ahmad"
           githubProfile="https://github.com/MJ-AHMAD"
         />
