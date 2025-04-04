@@ -30,11 +30,11 @@ export const ActedJobApplication: React.FC<ActedJobApplicationProps> = ({
           <p className="font-bold text-lg">{applicantName}</p>
           <p>{applicantEmail}</p>
           <p>{applicantPhone}</p>
-          {portfolioLink && (
+          {websiteLink && (
             <p>
-              Portfolio:{" "}
-              <a href={portfolioLink} className="text-blue-600 hover:underline">
-                {portfolioLink}
+              Website:{" "}
+              <a href={websiteLink} className="text-blue-600 hover:underline">
+                {websiteLink}
               </a>
             </p>
           )}
