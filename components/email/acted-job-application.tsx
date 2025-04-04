@@ -4,7 +4,7 @@ interface ActedJobApplicationProps {
   applicantName: string
   applicantEmail: string
   applicantPhone: string
-  portfolioLink?: string
+  websiteLink?: string
   linkedInProfile?: string
   githubProfile?: string
 }
@@ -144,7 +144,7 @@ export const ActedJobApplication: React.FC<ActedJobApplicationProps> = ({
         <div className="social-links mt-8 pt-4 border-t border-gray-200">
           <p className="font-medium mb-2">Connect with me:</p>
           <div className="flex space-x-4">
-            {portfolioLink && (
+            {websiteLink && (
               <a href={websiteLink} className="text-blue-600 hover:underline">
                 Website
               </a>
