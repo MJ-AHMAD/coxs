@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Coffee, Mail, Heart } from "lucide-react"
+import { Github, Coffee, Mail, Heart, BookOpen, Scale } from "lucide-react"
 
 export function Footer() {
   return (
@@ -116,6 +116,42 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
+          </div>
+        </div>
+        <div className="border-t border-gray-200 pt-8 mt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Cox's Bazar District Management</h3>
+              <p className="text-sm text-gray-600">An open source project for comprehensive district management</p>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="https://github.com/MJ-AHMAD/coxs"
+                className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-5 w-5" />
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://github.com/Sponsors/MJ-AHMAD"
+                className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Heart className="h-5 w-5" />
+                <span>Sponsor</span>
+              </a>
+              <a href="/docs" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900">
+                <BookOpen className="h-5 w-5" />
+                <span>Documentation</span>
+              </a>
+              <a href="/license" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900">
+                <Scale className="h-5 w-5" />
+                <span>License</span>
+              </a>
+            </div>
           </div>
         </div>
         <div className="mt-8 pt-4 border-t text-center text-sm text-muted-foreground">
