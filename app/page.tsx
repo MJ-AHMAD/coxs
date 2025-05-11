@@ -33,7 +33,10 @@ import NewsUpdates from "@/components/news-updates"
 import NewsletterSubscription from "@/components/newsletter-subscription"
 import LanguageSelector from "@/components/language-selector"
 import { Badge } from "@/components/ui/badge"
+<<<<<<< HEAD
 import { InfinityNexusVision } from "@/components/infinity-nexus-vision"
+=======
+>>>>>>> 2f4b40afb1bbd680c8044a43a587318f6c3c3c44
 
 export default function Home() {
   const hubs = [
@@ -84,6 +87,7 @@ export default function Home() {
   return (
     <div>
       {/* Open Source Project Banner */}
+<<<<<<< HEAD
       <div className="bg-gradient-to-r from-blue-700 via-indigo-600 to-purple-700 text-white py-3">
         <div className="container mx-auto px-4 text-center">
           <p className="flex items-center justify-center gap-2">
@@ -91,6 +95,15 @@ export default function Home() {
             <span>Open Source Innovation Hub - Join the Knowledge Revolution</span>
             <Link href="https://github.com/MJ-AHMAD" className="underline ml-2 hover:text-blue-100">
               Contribute on GitHub
+=======
+      <div className="bg-gradient-to-r from-blue-600 to-teal-500 text-white py-3">
+        <div className="container mx-auto px-4 text-center">
+          <p className="flex items-center justify-center gap-2">
+            <Code className="h-4 w-4" />
+            <span>Open Source Project - Contributions Welcome!</span>
+            <Link href="https://github.com/MJ-AHMAD" className="underline ml-2 hover:text-blue-100">
+              View on GitHub
+>>>>>>> 2f4b40afb1bbd680c8044a43a587318f6c3c3c44
             </Link>
           </p>
         </div>
@@ -104,6 +117,7 @@ export default function Home() {
           <Badge variant="outline" className="mb-4 px-3 py-1">
             Open Source
           </Badge>
+<<<<<<< HEAD
           <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 bg-clip-text text-transparent">
             Infinity Nexus
           </h1>
@@ -113,6 +127,14 @@ export default function Home() {
             data for scientific research, climate action, socio-economic progress, and AI-driven knowledge innovation.
             This open-source initiative aims to reshape global data accessibility and pioneer research in sustainability
             and future technology.
+=======
+          <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+            Cox's Bazar District Management System
+          </h1>
+          <p className="text-lg text-gray-600 mb-8">
+            An open source platform designed to provide comprehensive information and services for Cox's Bazar district.
+            This project aims to connect various sectors and initiatives to create a unified management system.
+>>>>>>> 2f4b40afb1bbd680c8044a43a587318f6c3c3c44
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button asChild className="gap-2">

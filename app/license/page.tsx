@@ -1,5 +1,6 @@
 export default function LicensePage() {
   return (
+<<<<<<< HEAD
     <div className="container mx-auto py-8">
       <h1 className="text-3xl font-bold mb-6">License</h1>
 
@@ -10,6 +11,21 @@ export default function LicensePage() {
           <p className="mb-4">Copyright (c) 2024 MJ AHMAD</p>
 
           <p className="mb-4">
+=======
+    <div className="container mx-auto px-4 py-12">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">MIT License</h1>
+          <p className="text-lg text-gray-600">
+            Cox's Bazar District Management System is licensed under the MIT License
+          </p>
+        </div>
+
+        <div className="prose prose-lg max-w-none">
+          <p>Copyright (c) 2025 MJ Ahmad</p>
+
+          <p>
+>>>>>>> 2f4b40afb1bbd680c8044a43a587318f6c3c3c44
             Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
             documentation files (the "Software"), to deal in the Software without restriction, including without
             limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
@@ -17,12 +33,20 @@ export default function LicensePage() {
             conditions:
           </p>
 
+<<<<<<< HEAD
           <p className="mb-4">
+=======
+          <p>
+>>>>>>> 2f4b40afb1bbd680c8044a43a587318f6c3c3c44
             The above copyright notice and this permission notice shall be included in all copies or substantial
             portions of the Software.
           </p>
 
+<<<<<<< HEAD
           <p className="mb-4">
+=======
+          <p>
+>>>>>>> 2f4b40afb1bbd680c8044a43a587318f6c3c3c44
             THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
             LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
             EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
@@ -31,6 +55,7 @@ export default function LicensePage() {
           </p>
         </div>
 
+<<<<<<< HEAD
         <h2 className="text-2xl font-bold mb-4">Third-Party Licenses</h2>
 
         <p className="mb-6">This project includes the following third-party open source software components:</p>
@@ -102,6 +127,36 @@ export default function LicensePage() {
           <div>
             <h3 className="text-lg font-semibold mb-2">Can I distribute the code?</h3>
             <p>Yes, you can distribute the original or modified code.</p>
+=======
+        <div className="mt-12 border-t pt-8">
+          <h2 className="text-2xl font-bold mb-4">Third-Party Licenses</h2>
+          <p className="mb-6">This project includes the following third-party open source software components:</p>
+
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold">Next.js</h3>
+              <p className="text-sm text-gray-600">MIT License</p>
+              <p className="mt-2">Copyright (c) 2023 Vercel, Inc.</p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">React</h3>
+              <p className="text-sm text-gray-600">MIT License</p>
+              <p className="mt-2">Copyright (c) Meta Platforms, Inc. and affiliates.</p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">Tailwind CSS</h3>
+              <p className="text-sm text-gray-600">MIT License</p>
+              <p className="mt-2">Copyright (c) Tailwind Labs, Inc.</p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">shadcn/ui</h3>
+              <p className="text-sm text-gray-600">MIT License</p>
+              <p className="mt-2">Copyright (c) 2023 shadcn</p>
+            </div>
+>>>>>>> 2f4b40afb1bbd680c8044a43a587318f6c3c3c44
           </div>
         </div>
       </div>
