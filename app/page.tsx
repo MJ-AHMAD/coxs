@@ -116,13 +116,13 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button asChild className="gap-2">
-              <Link href="https://github.com/MJ-AHMAD/coxs.git">
+              <Link href="https://github.com/MJ-AHMAD">
                 <Github className="h-4 w-4" />
                 GitHub Repository
               </Link>
             </Button>
             <Button asChild variant="outline" className="gap-2">
-              <Link href="https://github.com/sponsors/MJ-AHMAD">
+              <Link href="https://github.com/Sponsors/MJ-AHMAD">
                 <Heart className="h-4 w-4 text-red-500" />
                 Sponsor Project
               </Link>
