@@ -104,8 +104,13 @@ export default function Home() {
           <Badge variant="outline" className="mb-4 px-3 py-1">
             Open Source
           </Badge>
+<<<<<<< HEAD
           <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 bg-clip-text text-transparent">
             Infinity Nexus
+=======
+          <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+            Infinity Nexus - Global Data Hub
+>>>>>>> 7a9ab91ec6de737208ef5ece8bc2099d59f59b47
           </h1>
           <p className="text-xl text-gray-700 mb-4 font-medium">Empowering Knowledge, Transforming Futures</p>
           <p className="text-lg text-gray-600 mb-8">
