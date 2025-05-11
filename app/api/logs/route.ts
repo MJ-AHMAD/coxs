@@ -39,4 +39,3 @@ MESSAGE: ${log.message}
     })
   }
 }
-

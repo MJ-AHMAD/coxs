@@ -70,4 +70,3 @@ MESSAGE: ${message}
 export async function getContactLogs() {
   return contactLogs
 }
-

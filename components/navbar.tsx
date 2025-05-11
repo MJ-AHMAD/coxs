@@ -32,8 +32,10 @@ export function Navbar() {
     <header className="border-b">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold">Trusted Ally</span>
-          <span className="text-sm text-muted-foreground">Cox's Bazar</span>
+          <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
+            Infinity Nexus
+          </span>
+          <span className="text-sm text-muted-foreground">Global Data Hub • Cox's Bazar</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
@@ -86,4 +88,3 @@ export function Navbar() {
     </header>
   )
 }
-

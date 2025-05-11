@@ -7,10 +7,12 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Trusted Ally</h3>
+            <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 bg-clip-text text-transparent">
+              Infinity Nexus
+            </h3>
             <p className="text-sm text-muted-foreground mb-4">
-              A comprehensive management system for Cox's Bazar district, providing information and services across
-              various sectors.
+              A global data hub originating in Cox's Bazar, pioneering AI-driven research and knowledge innovation for
+              scientific advancement and sustainable futures.
             </p>
             <div className="flex space-x-4">
               <Link href="https://github.com/MJ-AHMAD" className="text-gray-600 hover:text-black">
@@ -121,8 +123,12 @@ export function Footer() {
         <div className="border-t border-gray-200 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
-              <h3 className="text-lg font-semibold mb-2">Cox's Bazar District Management</h3>
-              <p className="text-sm text-gray-600">An open source project for comprehensive district management</p>
+              <h3 className="text-lg font-semibold mb-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 bg-clip-text text-transparent">
+                Infinity Nexus
+              </h3>
+              <p className="text-sm text-gray-600">
+                An open source initiative for global data innovation and knowledge transformation
+              </p>
             </div>
             <div className="flex flex-wrap gap-4">
               <a
@@ -155,7 +161,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-4 border-t text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Trusted Ally - Cox's Bazar District Management. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Infinity Nexus - Global Data Hub • Cox's Bazar. All rights reserved.</p>
           <p className="mt-2">
             <Link href="/license" className="hover:underline">
               MIT License

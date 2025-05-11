@@ -17,4 +17,3 @@ const DigitalDividePage = () => {
 }
 
 export default DigitalDividePage
-

@@ -8,8 +8,9 @@ import { OpenSourceBanner } from "@/components/open-source-banner"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Trusted Ally - Cox's Bazar District Management",
-  description: "Comprehensive open source management system for Cox's Bazar district",
+  title: "Infinity Nexus - Global Data Hub | Cox's Bazar",
+  description: "A global-standard data hub for scientific research, climate action, and AI-driven knowledge innovation",
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({

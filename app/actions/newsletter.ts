@@ -38,4 +38,3 @@ export async function subscribeToNewsletter(formData: FormData) {
     return { success: false, message: "An error occurred. Please try again later." }
   }
 }
-

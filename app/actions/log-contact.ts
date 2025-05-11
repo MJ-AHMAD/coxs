@@ -90,4 +90,3 @@ export async function getContactLogs() {
     return "Error reading logs"
   }
 }
-

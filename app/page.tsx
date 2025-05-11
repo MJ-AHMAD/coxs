@@ -33,6 +33,7 @@ import NewsUpdates from "@/components/news-updates"
 import NewsletterSubscription from "@/components/newsletter-subscription"
 import LanguageSelector from "@/components/language-selector"
 import { Badge } from "@/components/ui/badge"
+import { InfinityNexusVision } from "@/components/infinity-nexus-vision"
 
 export default function Home() {
   const hubs = [
@@ -83,13 +84,13 @@ export default function Home() {
   return (
     <div>
       {/* Open Source Project Banner */}
-      <div className="bg-gradient-to-r from-blue-600 to-teal-500 text-white py-3">
+      <div className="bg-gradient-to-r from-blue-700 via-indigo-600 to-purple-700 text-white py-3">
         <div className="container mx-auto px-4 text-center">
           <p className="flex items-center justify-center gap-2">
             <Code className="h-4 w-4" />
-            <span>Open Source Project - Contributions Welcome!</span>
+            <span>Open Source Innovation Hub - Join the Knowledge Revolution</span>
             <Link href="https://github.com/MJ-AHMAD" className="underline ml-2 hover:text-blue-100">
-              View on GitHub
+              Contribute on GitHub
             </Link>
           </p>
         </div>
@@ -103,12 +104,15 @@ export default function Home() {
           <Badge variant="outline" className="mb-4 px-3 py-1">
             Open Source
           </Badge>
-          <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
-            Cox's Bazar District Management System
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 bg-clip-text text-transparent">
+            Infinity Nexus
           </h1>
+          <p className="text-xl text-gray-700 mb-4 font-medium">Empowering Knowledge, Transforming Futures</p>
           <p className="text-lg text-gray-600 mb-8">
-            An open source platform designed to provide comprehensive information and services for Cox's Bazar district.
-            This project aims to connect various sectors and initiatives to create a unified management system.
+            A global-standard data hub originating in Cox's Bazar, designed to collect, process, analyze, and secure
+            data for scientific research, climate action, socio-economic progress, and AI-driven knowledge innovation.
+            This open-source initiative aims to reshape global data accessibility and pioneer research in sustainability
+            and future technology.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button asChild className="gap-2">
@@ -195,6 +199,8 @@ export default function Home() {
 
       <StatisticsSection />
 
+      <InfinityNexusVision />
+
       <VisionProjectsSection />
 
       <FeaturedProject />
@@ -202,11 +208,12 @@ export default function Home() {
       <div className="container mx-auto">
         <section className="py-12">
           <div className="text-center mb-10">
-            <h2 className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
-              Specialized Development Centers
+            <h2 className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 bg-clip-text text-transparent">
+              Knowledge & Innovation Hubs
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive initiatives working together to transform Cox's Bazar into a model district
+              Interconnected data ecosystems working together to transform Cox's Bazar into a global center for research
+              and innovation
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

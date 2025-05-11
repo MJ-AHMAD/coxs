@@ -20,4 +20,3 @@ const DigitalLiteracyPage = () => {
 }
 
 export default DigitalLiteracyPage
-

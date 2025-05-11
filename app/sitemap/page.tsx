@@ -32,7 +32,7 @@ export default function Sitemap() {
         { name: "Education Hub", href: "/education-hub", icon: GraduationCap },
         { name: "Economic Hub", href: "/economic-hub", icon: Building },
         { name: "Climate Hub", href: "/climate-hub", icon: Cloud },
-        { name: "Social Initiatives", href: "https://ecmv.vercel.app/social-initiatives", icon: Heart },
+        { name: "Social Initiatives", href: "/social-initiatives", icon: Heart },
       ],
     },
     {
@@ -55,7 +55,6 @@ export default function Sitemap() {
         { name: "Ads", href: "/ads", icon: AdCircle },
         { name: "Archive", href: "/archive", icon: Archive },
         { name: "MJ Ahmad", href: "/mjahmad", icon: User },
-        { name: "Founder", href: "https://cox-hazel.vercel.app/administrative/founder", icon: User },
       ],
     },
     {
@@ -149,4 +148,3 @@ export default function Sitemap() {
     </div>
   )
 }
-

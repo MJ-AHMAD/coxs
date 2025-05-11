@@ -335,4 +335,3 @@ export default function ProjectStructure() {
     </div>
   )
 }
-
