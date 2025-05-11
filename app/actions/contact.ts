@@ -1,5 +1,7 @@
 "use server"
 
+import { neon } from "@neondatabase/serverless"
+
 // Define the type for the form data
 type ContactFormData = {
   name: string
@@ -9,8 +11,28 @@ type ContactFormData = {
   timestamp: string
 }
 
-// In-memory log storage (will persist until server restart)
-const contactLogs: ContactFormData[] = []
+// Initialize the Neon SQL client
+const sql = neon(process.env.DATABASE_URL || "")
+
+// Create the contact_logs table if it doesn't exist
+async function ensureContactLogsTable() {
+  try {
+    await sql`
+      CREATE TABLE IF NOT EXISTS contact_logs (
+        id SERIAL PRIMARY KEY,
+        name TEXT NOT NULL,
+        email TEXT NOT NULL,
+        inquiry_type TEXT,
+        message TEXT NOT NULL,
+        timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+      )
+    `
+    return true
+  } catch (error) {
+    console.error("Error creating contact_logs table:", error)
+    return false
+  }
+}
 
 export async function submitContactForm(formData: FormData) {
   try {
@@ -35,23 +57,20 @@ export async function submitContactForm(formData: FormData) {
       timestamp,
     }
 
-    // Format log entry for console
-    const logEntry = `
-==========================================================
-TIMESTAMP: ${timestamp}
-NAME: ${name}
-EMAIL: ${email}
-INQUIRY TYPE: ${inquiryType}
-MESSAGE: ${message}
-==========================================================
-`
+    // Ensure the table exists
+    const tableExists = await ensureContactLogsTable()
+    if (!tableExists) {
+      throw new Error("Failed to create contact_logs table")
+    }
 
-    // Log to console (this will appear in server logs)
-    console.log("New contact form submission:")
-    console.log(logEntry)
+    // Insert into database
+    await sql`
+      INSERT INTO contact_logs (name, email, inquiry_type, message, timestamp)
+      VALUES (${name}, ${email}, ${inquiryType}, ${message}, ${timestamp})
+    `
 
-    // Store in our in-memory log array
-    contactLogs.push(contactData)
+    // Log to console as well
+    console.log("New contact form submission:", contactData)
 
     return {
       success: true,
@@ -68,5 +87,31 @@ MESSAGE: ${message}
 
 // Function to retrieve logs (for admin use)
 export async function getContactLogs() {
-  return contactLogs
+  try {
+    // Ensure the table exists
+    await ensureContactLogsTable()
+
+    // Fetch logs from database
+    const logs = await sql`
+      SELECT * FROM contact_logs
+      ORDER BY timestamp DESC
+    `
+
+    if (logs.length === 0) {
+      return []
+    }
+
+    // Format logs for API response
+    return logs.map((log) => ({
+      id: log.id,
+      name: log.name,
+      email: log.email,
+      inquiryType: log.inquiry_type,
+      message: log.message,
+      timestamp: new Date(log.timestamp).toISOString(),
+    }))
+  } catch (error) {
+    console.error("Error reading logs:", error)
+    return []
+  }
 }

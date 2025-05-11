@@ -6,6 +6,12 @@ export async function GET(request: NextRequest) {
   try {
     const logs = await getContactLogs()
 
+    if (logs.length === 0) {
+      return new NextResponse("No logs found", {
+        status: 404,
+      })
+    }
+
     // Format logs for display
     const formattedLogs = logs
       .map(
@@ -21,17 +27,11 @@ MESSAGE: ${log.message}
       )
       .join("\n")
 
-    if (logs.length > 0) {
-      return new NextResponse(formattedLogs, {
-        headers: {
-          "Content-Type": "text/plain",
-        },
-      })
-    } else {
-      return new NextResponse("No logs found", {
-        status: 404,
-      })
-    }
+    return new NextResponse(formattedLogs, {
+      headers: {
+        "Content-Type": "text/plain",
+      },
+    })
   } catch (error) {
     console.error("Error reading logs:", error)
     return new NextResponse("Error reading logs", {

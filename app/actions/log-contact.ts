@@ -1,7 +1,6 @@
 "use server"
 
-import fs from "fs"
-import path from "path"
+import { neon } from "@neondatabase/serverless"
 
 // Define the type for the form data
 type ContactFormData = {
@@ -10,6 +9,29 @@ type ContactFormData = {
   inquiryType: string
   message: string
   timestamp: string
+}
+
+// Initialize the Neon SQL client
+const sql = neon(process.env.DATABASE_URL || "")
+
+// Create the contact_logs table if it doesn't exist
+async function ensureContactLogsTable() {
+  try {
+    await sql`
+      CREATE TABLE IF NOT EXISTS contact_logs (
+        id SERIAL PRIMARY KEY,
+        name TEXT NOT NULL,
+        email TEXT NOT NULL,
+        inquiry_type TEXT,
+        message TEXT NOT NULL,
+        timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+      )
+    `
+    return true
+  } catch (error) {
+    console.error("Error creating contact_logs table:", error)
+    return false
+  }
 }
 
 export async function logContactSubmission(formData: FormData) {
@@ -35,31 +57,20 @@ export async function logContactSubmission(formData: FormData) {
       timestamp,
     }
 
-    // Format log entry
-    const logEntry = `
-==========================================================
-TIMESTAMP: ${timestamp}
-NAME: ${name}
-EMAIL: ${email}
-INQUIRY TYPE: ${inquiryType}
-MESSAGE: ${message}
-==========================================================
-`
-
-    // Create logs directory if it doesn't exist
-    const logsDir = path.join(process.cwd(), "logs")
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true })
+    // Ensure the table exists
+    const tableExists = await ensureContactLogsTable()
+    if (!tableExists) {
+      throw new Error("Failed to create contact_logs table")
     }
 
-    // Log file path
-    const logFilePath = path.join(logsDir, "contact-submissions.log")
-
-    // Append to log file
-    fs.appendFileSync(logFilePath, logEntry)
+    // Insert into database
+    await sql`
+      INSERT INTO contact_logs (name, email, inquiry_type, message, timestamp)
+      VALUES (${name}, ${email}, ${inquiryType}, ${message}, ${timestamp})
+    `
 
     // Log to console as well
-    console.log("New contact form submission logged to file:", logFilePath)
+    console.log("New contact form submission logged to database:", contactData)
 
     return {
       success: true,
@@ -77,14 +88,35 @@ MESSAGE: ${message}
 // Function to retrieve logs (for admin use)
 export async function getContactLogs() {
   try {
-    const logFilePath = path.join(process.cwd(), "logs", "contact-submissions.log")
+    // Ensure the table exists
+    await ensureContactLogsTable()
 
-    if (fs.existsSync(logFilePath)) {
-      const logs = fs.readFileSync(logFilePath, "utf8")
-      return logs
+    // Fetch logs from database
+    const logs = await sql`
+      SELECT * FROM contact_logs
+      ORDER BY timestamp DESC
+    `
+
+    if (logs.length === 0) {
+      return "No logs found"
     }
 
-    return "No logs found"
+    // Format logs for display
+    const formattedLogs = logs
+      .map(
+        (log) => `
+==========================================================
+TIMESTAMP: ${new Date(log.timestamp).toISOString()}
+NAME: ${log.name}
+EMAIL: ${log.email}
+INQUIRY TYPE: ${log.inquiry_type}
+MESSAGE: ${log.message}
+==========================================================
+`,
+      )
+      .join("\n")
+
+    return formattedLogs
   } catch (error) {
     console.error("Error reading logs:", error)
     return "Error reading logs"
