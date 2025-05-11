@@ -119,7 +119,7 @@ export default function Home() {
               <Link href="https://github.com/MJ-AHMAD/coxs.git">
                 <Github className="h-4 w-4" />
                 GitHub Repository
-              </Link>
+              </Link> 
             </Button>
             <Button asChild variant="outline" className="gap-2">
               <Link href="https://github.com/sponsors/MJ-AHMAD">
